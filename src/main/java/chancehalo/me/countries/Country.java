@@ -21,6 +21,14 @@ public class Country {
         this.medianAge = medianAge;
     }
 
+//    public Country(Country toClone) {
+//        this.id = toClone.getId();
+//        this.name = toClone.getName();
+//        this.population = toClone.getPopulation();
+//        this.landMassSize = toClone.getLandMassSize();
+//        this.medianAge = toClone.getMedianAge();
+//    }
+
     public long getId() {
         return id;
     }
@@ -55,5 +63,16 @@ public class Country {
 
     public void setMedianAge(int medianAge) {
         this.medianAge = medianAge;
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", population=" + population +
+                ", landMassSize=" + landMassSize +
+                ", medianAge=" + medianAge +
+                '}';
     }
 }
