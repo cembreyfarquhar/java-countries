@@ -10,4 +10,31 @@ public class CountryList {
         countryList.add(new Country("Germany", 82790000, 137847, 46));
         countryList.add(new Country("Spain", 46720000, 195364, 43));
     }
+
+    public Country findCountry(CheckCountry tester) {
+        for (Country c: countryList) {
+            if (tester.test(c)) {
+                return c;
+            }
+        }
+
+        return null;
+    }
+
+    public ArrayList<Country> findCountries(CheckCountry tester) {
+        ArrayList<Country> tempCountryList = new ArrayList<>();
+
+        for (Country c: countryList) {
+            if (tester.test(c)) {
+                tempCountryList.add(c);
+            }
+        }
+
+        return tempCountryList;
+    }
+
+
+
+
+
 }
