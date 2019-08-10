@@ -15,10 +15,10 @@ public class CountryController {
         return new ResponseEntity<>(CountriesApplication.ourCountryList.countryList, HttpStatus.OK);
     }
 
-//    @GetMapping(value = "/employee/{id}")
-//    public ResponseEntity<?> getEmpDetail(@PathVariable long id) {
-//        Employee rtnEmployee = WebemployeesrealApplication.ourEmpList.findEmployee(e -> (e.getId() == id));
-//        return new ResponseEntity<>(rtnEmployee, HttpStatus.OK);
-//    }
+    @GetMapping(value = "/countries/{id}")
+    public ResponseEntity<?> getEmpDetail(@PathVariable long id) {
+        Country returnCountry = CountriesApplication.ourCountryList.findCountry(e -> (e.getId() == id));
+        return new ResponseEntity<>(returnCountry, HttpStatus.OK);
+    }
 }
 
